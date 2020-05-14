@@ -3,7 +3,7 @@ public class Main {
 
     public static void main(String args[]){
 
-        String csvData = "Hier steht später JSON code";
+        String csvData = "Christoph ist ein Hurensohn";
         //TODO Neuestes CSV finden
 
         //TODO CSV lesen
