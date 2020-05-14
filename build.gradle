@@ -11,8 +11,17 @@ repositories {
     mavenCentral()
 }
 
+configurations {
+    // configuration that holds jars to include in the jar
+    extraLibs
+}
+
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile files('libs/rkon-core-1.1.2.jar')
+    compile fileTree(dir: 'libs', include: '*.jar')
+    extraLibs fileTree(dir: 'libs', include: '*.jar')
+    configurations.compile.extendsFrom(configurations.extraLibs)
 }
 
 jar {
